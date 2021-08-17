@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON nad AJAX</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/icofont.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="getCurrentWeather()" id="body-main">
+
+    <header>
+        <h1>Weather App</h1>
+    </header><br>
+
+    <div id="main-head">
+        <input type="number" placeholder="Input your latitude" id="input-lat" class="input-text">
+        <input type="number" placeholder="Input your longitude" id="input-lon" class="input-text">
+        <button id="btn" onclick="getSpecificWeather()" class="btn">Fetch weather  <span>&#10148;</span></i></button><br><br>
+        <button onclick="getCurrentWeather()" class="btn"><i class="fa fa-map-marker"></i>  Fetch Current Weather</button>
+        <div id="radio">
+            <form action="" name="formA">
+                Temperature in 
+                <input type="radio" name="temp-degree" value="celsius" checked id="deg-cel">° C
+                <input type="radio" name="temp-degree" value="fahrenheit" id="deg-fah">° F
+            </form>
+        </div>
+    </div><br>
+
+    
+    <div id="weather-city">
+        <div id="blank1">City name and location comes here</div>
+        <div id="city" class="details"></div>
+        <div id="summary" class="details"></div>
+        <div id="icon"></div>
+    </div><br>
+    
+    <div id="weather-info">
+        <div id="blank">Weather info comes here</div>
+        <div id="temp-cur" class="details"></div>
+        <div id="wind-speed" class="details"></div>
+        <div id="pressure" class="details"></div>
+        <div id="humidity" class="details"></div>
+    </div>
+
+    <div class="text-center" id="footer">by <a href="https://codepen.io/sankalpdayal5/" target="_blank" id="name">Sankalp Dayal</a> </div>    
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
